@@ -1,0 +1,253 @@
+.modal {
+    position: fixed;
+    z-index: 1000;
+}
+
+.modal.open {
+}
+
+.modal-overlay {
+    position: fixed;
+    top:0; left: 0; right: 0; bottom: 0;
+    background: rgba(61, 65, 73, 0.8);
+    z-index: 1002;
+}
+
+.modal-content {
+    position: fixed;
+    top:0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    z-index: 1100;
+}
+
+/* Modal transition for the overlay */
+
+.mt-enter .modal-overlay {
+    opacity: 0;
+    transition: opacity .1s ease-in;
+}
+
+.mt-enter.mt-enter-active .modal-overlay {
+    opacity: 1;
+}
+
+.mt-leave .modal-overlay {
+    opacity: 1;
+    transition: opacity .1s ease-in;
+}
+
+.mt-leave.mt-leave-active .modal-overlay {
+    opacity: 0;
+}
+
+/* Modal transition for the content */
+
+.mt-enter .modal-content {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: transform .1s ease-in, opacity .1s ease-in;
+}
+
+.mt-enter.mt-enter-active .modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.mt-leave .modal-content {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform .1s ease-in, opacity .1s ease-in;
+}
+
+.mt-leave.mt-leave-active .modal-content {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+/* Modal Dialog */
+
+.dialog {
+    line-height: normal
+}
+
+.dialog .pure-g {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background-color: #141414;
+    width: 600px;
+    max-width: 100%;
+    margin-bottom: auto;
+    margin-top: auto;
+    padding: 1.6em 2em;
+    box-shadow: 4px 8px 20px 0 rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+.dialog .icon {
+    display: block;
+    font-size: 5em !important;
+    width: 100%;
+    text-align: center;
+    color: rgb(118, 185, 1);
+}
+
+.dialog h3 {
+    color: white;
+    margin: 0.5em 0;
+}
+
+.dialog .controls {
+    text-align: right;
+    float: right;
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+
+.dialog .controls.cancel {
+    float: left;
+}
+
+.dialog .controls.cancel button {
+    margin-left: 0;
+}
+
+.dialog .controls button {
+    margin-left: 0.5em;
+    margin-top: 0;
+}
+
+.dialog.positive .pure-button-primary {
+    background-color: #76b901;
+    color: white;
+}
+
+.dialog.critical .pure-button-primary {
+    background: rgb(202, 60, 60);
+    color: white;
+}
+
+.dialog.warning .pure-button-primary {
+    background: rgb(223, 117, 20);
+    color: white;
+}
+
+.dialog.critical .icon {
+    color: rgb(202, 60, 60);
+}
+
+.dialog.warning .icon {
+    color: rgb(223, 117, 20);
+}
+
+.dialog.wide-dialog .pure-g {
+    width: 660px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.dialog.wide-dialog.no-y-scroll .pure-g {
+    overflow-y: initial;
+}
+
+.dialog.copy .resolution input {
+    width: 100%;
+}
+
+.dialog.copy .aspect-lock-container {
+    padding: .5em .6em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.dialog.copy .aspect-lock-container i {
+    transition: all .2s ease;
+}
+
+.dialog.copy .aspect-lock-container i.ion-unlocked {
+    color: #ccc;
+}
+
+.dialog.copy input:not([type=checkbox]) {
+    width: 100%;
+}
+
+.dialog.copy fieldset {
+    margin-bottom: .5em;
+    padding: 0;
+}
+
+.dialog.copy .controls button[type=submit] {
+    margin-right: 0;
+}
+
+.dialog.copy fieldset.optional {
+    opacity: 1;
+    transition: opacity 0.1s ease-out;
+}
+
+.dialog.copy fieldset.optional.disabled {
+    opacity: 0.4;
+}
+
+.dialog .help-block {
+    display: block;
+    font-size: 70%;
+    line-height: 1.5em;
+    color: #666;
+    margin: 0 1em 0 0;
+}
+
+.dialog.copy .centered {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dialog.stop-dialog button {
+    font-size: 10pt;
+}
+
+@media (max-width: 50em) {
+    .dialog .icon-container {
+        display: none;
+    }
+
+    .dialog .message {
+        width: 100%;
+    }
+}
+
+/* Preview image modal dialog */
+
+.preview-image-dialog .pure-g {
+    width: 100%;
+    box-sizing: content-box;
+    min-width: 400px;
+}
+
+.preview-image-dialog img {
+    box-shadow: 0 0px 11px 2px black;
+    max-width: 100%;
+    background: #ccc;
+
+    image-rendering: -moz-crisp-edges;
+    image-rendering:   -o-crisp-edges;
+    image-rendering:      crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.preview-image-dialog .details {
+    position: relative;
+    height: 100%;
+    min-height: 2em;
+    margin-top: 1em;
+}
+
+.preview-image-dialog .controls {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

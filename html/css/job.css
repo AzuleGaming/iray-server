@@ -1,0 +1,224 @@
+.job-name {
+    color: white;
+    word-wrap: break-word;
+}
+
+.job-date {
+    font-size: 8pt;
+    height: 20px;
+}
+
+.job-control {
+    font-size: 8pt;
+    margin-right: 0.5em;
+    height: 20px;
+    padding: .35em 0.66em;
+}
+
+.job-control button {
+    height: 20px;
+    width: 24px;
+    border-radius: 2px;
+}
+
+.job-more:focus{
+    outline: none;
+}
+
+.job-status {
+    display: inline-block;
+    line-height: normal;
+    font-size: 8pt;
+    background-color: #444851;
+    border-radius: 2px;
+    padding: .35em 1em;
+    margin-right: 0.5em;
+    height: 20px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.job-status.active {
+    background-color: #76b901;
+    color: white;
+}
+
+.job-status.failed {
+    background: rgb(202, 60, 60);
+    color: white;
+}
+
+.job-details {
+    font-size: 9pt;
+    line-height: 100%;
+}
+
+.job-details .buffers {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+}
+
+.job-details .buffers .tag {
+}
+
+.content ul li .job-control.pure-button.button-warning:hover {
+    background-color: rgb(223, 117, 20);
+}
+
+.content ul li .job-control.pure-button.button-error:hover {
+    background-color: rgb(202, 60, 60);
+}
+
+.content ul li .job-control.pure-button.pure-button-primary:hover {
+    background-color: #76b901;
+}
+
+.content ul li .job-control.pure-button.button-secondary:hover {
+    background: rgb(66, 184, 221);
+}
+
+.content ul li:hover .progress-bar label {
+    opacity: 1;
+}
+
+.control {
+    float: right;
+    text-align: right;
+}
+
+.control .status {
+    display: inline-block;
+    line-height: normal;
+    color: #ccc;
+    background-color: #444851;
+    border-radius: 2px;
+    padding: 0.2em 0.6em;
+    font-weight: normal;
+}
+
+.pure-button.control {
+    padding: 0.2em 0.6em;
+    margin-left: 0.4em;
+    float: right;
+}
+
+.pure-table.buffers {
+    display: inline-table;
+    font-size: 8pt;
+    width: 50%;
+}
+
+.advanced-buffer-form {
+    visibility: hidden;
+    margin-top: -256px;
+    opacity: 0;
+    transition: all 0.2s ease;
+    padding-top: 0px;
+    background-color: #1E2024;
+    padding: 1em;
+}
+
+.advanced-buffer-form.show {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0px;
+    z-index: initial;
+}
+
+.pure-group.lpe {
+    display: inline-block;
+}
+
+.expression-errors {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.expression-errors li {
+    display: block !important;
+    min-width: 200px;
+    padding: 0.2em 1em;
+    box-shadow: none;
+    background: none;
+}
+
+.code.job-status-message {
+    margin: 0;
+    padding: 1em 0;
+    color: #DF7514;
+    font-size: 10pt;
+}
+
+.buffer-list {
+    font-size: 9pt;
+}
+
+.buffer-list .Select {
+    width: 100%;
+    min-width: auto;
+}
+
+.buffer-list .add-form .pure-u-1-4 {
+    padding: 0 0.3em;
+    box-sizing: border-box;
+}
+
+.buffer-list ul li .Select {
+    width: 90%;
+    margin-left: -0.8em;
+}
+
+.buffer-list .Select-arrow {
+    top: 11px;
+    border-width: 4px 4px 0;
+}
+
+.buffer-list .Select.subtle .Select-control:not(:hover) {
+    border-color: transparent;
+    background: none;
+}
+
+.buffer-list .Select.subtle .Select-control:not(:hover) .Select-arrow {
+    opacity: 0;
+}
+
+.buffer-list .remove-button {
+    font-size: 90%;
+}
+
+.result-details .job-details .code {
+    padding: 0;
+}
+
+.result-details ul {
+    margin: 0;
+}
+
+.visible-details {
+    box-shadow: 0px 0px 20px black;
+    background-color: rgba(40, 43, 48, 1);
+}
+
+.visible-details .pure-u-1-1 {
+    padding: 1em 0.5em;
+}
+
+.preview-image {
+    width: initial;
+    height: initial;
+}
+
+.preview-image img {
+    max-width: 100%;
+    max-height: 182px;
+}
+
+.preview-image.empty {
+    background-color: black;
+    width: 220px;
+    height: 180px;
+    max-width: 100%;
+}
+

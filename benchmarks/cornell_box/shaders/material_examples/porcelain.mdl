@@ -1,0 +1,41 @@
+/******************************************************************************
+ * Copyright 1986, 2016 NVIDIA Corporation. All rights reserved.
+ *****************************************************************************/
+
+
+mdl 1.0;
+using df import *;
+using state import *;
+using base import *;
+using tex import *;
+
+
+
+export material porcelain(
+        color base_color = color(0.92, 0.92,  0.92),        
+        float roughness = 0.1,
+        float coat_ior = 1.5,
+        float glossy_weight = 0.8
+) = let{
+        bsdf glossy_bsdf = simple_glossy_bsdf(
+                                mode: scatter_reflect,
+                                tint: color(1.0),
+                                roughness_u: roughness
+        );
+        
+        bsdf diffuse_bsdf = diffuse_reflection_bsdf(
+                                roughness: 0.0,
+                                tint: base_color
+        );
+        
+    } in material(
+
+        surface: material_surface(
+            scattering: fresnel_layer(
+                            ior: color(coat_ior),
+                            weight: glossy_weight,
+                            layer: glossy_bsdf,
+                            base: diffuse_bsdf
+                        )
+        )
+    );

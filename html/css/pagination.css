@@ -1,0 +1,53 @@
+.pagination-list {
+    width: 100%;
+    text-align: center;
+    font-size: 80%;
+}
+
+.pagination-list .pure-menu-list {
+    /* Fix for Firefox */
+    white-space: normal;
+}
+
+.pagination-list ul li a {
+    padding: .5em 1em;
+    color: white;
+}
+
+.pagination-list .pure-menu-item {
+    padding: .5em 1em;
+}
+
+.pagination-list ul li a:hover {
+    color: #AEE113;
+}
+
+.pagination-list ul li.active a {
+    color: #AEE113;
+    box-shadow: inset 0px -2px 0px 0px #AEE113;
+    background-color: rgba(35, 37, 42, 1);
+}
+
+.pagination-list .next {
+    width: 8em;
+    float: right;
+}
+
+.pagination-list .previous {
+    width: 8em;
+    float: left;
+}
+
+.pagination-list ul li {
+    /* background-color: rgba(35, 37, 42, 1); */
+    background-color: transparent !important;
+}
+
+.pagination-list.pure-menu-scrollable {
+    padding: 0;
+}
+
+.pagination-list .box-content {
+    padding: 0;
+}
+

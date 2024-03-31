@@ -1,0 +1,9 @@
+# IrayViewer
+# Importer/Exporter Version: 1.0
+# Neuray Version: 2015, build 237817, 10 Feb 2015, nt-x86-64-vc11
+# Exported: Thu Feb 12 17:34:57 2015
+
+$include "base.mdl"
+$include "::material_examples::architectural.mdl"
+$include "::material_examples::porcelain.mdl"
+$include "::material_examples::lights_simple.mdl"

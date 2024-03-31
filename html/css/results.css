@@ -1,0 +1,27 @@
+ul.results-table li {
+    padding: 0.5em 1.0em;
+}
+
+.result-files-container {
+    line-height: 0;
+}
+
+.result-file {
+    width: calc(25% - 6px);
+    margin-right: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+.result-file:nth-of-type(4n) {
+    margin-right: 0;
+}
+
+.result-overview-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 4em;
+}
+

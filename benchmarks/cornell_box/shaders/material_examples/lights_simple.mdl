@@ -1,0 +1,47 @@
+/******************************************************************************
+ * Copyright 1986, 2016 NVIDIA Corporation. All rights reserved.
+*****************************************************************************/
+
+mdl 1.0;
+
+import df::*;
+
+export material light_omni ( 
+	uniform color tint = color(1.), 
+	uniform float intensity = 10, 
+	uniform float unit_scale = 1. //an additiopnal scaling factor usefull if scene is not modelled in m or if the user wants to do other compensations 
+) = material (
+    surface: material_surface (
+		emission:  material_emission (
+			emission: df::diffuse_edf(),
+			intensity: tint*intensity*unit_scale
+		)
+	)
+);
+
+export material light_spot ( 
+	uniform color tint = color(1.), 
+	uniform float intensity = 10, 
+	uniform float unit_scale = 1., //an additiopnal scaling factor usefull if scene is not modelled in m or if the user wants to do other compensations 
+	uniform float spot_exponent = 30 //the shape of the emissive lobe
+) = material (
+    surface: material_surface (
+		emission:  material_emission (
+			emission: df::spot_edf(exponent: spot_exponent,global_distribution: true, global_frame: float3x3(1.,0,0,   0,1.,0.,  0.,0,-1) ),
+			intensity: tint*intensity*unit_scale
+		)
+    )
+);
+export material light_ies ( 
+	uniform light_profile profile = light_profile(),
+	uniform color tint = color(1.), 
+	uniform float intensity = 10, 
+	uniform float unit_scale = 1. //an additiopnal scaling factor usefull if scene is not modelled in m or if the user wants to do other compensations 
+) = material (
+    surface: material_surface (
+		emission:  material_emission (
+			emission: df::measured_edf(profile: profile,global_distribution: true, global_frame: float3x3(1.,0,0,   0,1.,0.,  0.,0,1) ),
+			intensity: tint*intensity*unit_scale
+		)
+	)
+);

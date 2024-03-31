@@ -1,0 +1,56 @@
+.menu-left {
+    margin-left: -232px;
+    width: 232px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: #191818;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pure-menu-link {
+    color: #999;
+    border: none;
+    padding: 0.6em 1.6em;
+    line-height: 1.5em;
+}
+
+.pure-menu-link:hover, .pure-menu-link:focus {
+    color: white;
+    background-color: rgba(35, 37, 42, 1);
+}
+
+.pure-menu-selected .pure-menu-link {
+    background: #76b901;
+    color: white !important;
+}
+
+.pure-menu-heading img {
+    margin: 0.5em 0;
+    width: 70%;
+}
+
+.menu-left .info {
+    position: absolute;
+    bottom: 12px;
+    padding-left: 0.6em;
+}
+.menu-left .info .title {
+    font-size: 90%;
+    color: #ccc;
+}
+
+.menu-left .info .version {
+    font-size: 80%;
+    color: #888;
+}
+
+.menu-left i.icon {
+    float: left;
+    font-size: 120%;
+    margin-right: 0.8em;
+    width: 14px;
+}
